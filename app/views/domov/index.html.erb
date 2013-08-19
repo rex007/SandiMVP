@@ -55,16 +55,16 @@
  
        <div class="row blog">
           <img src="assets/body_blog.png" alt="">
-                <% for blog in @blogs %>
-                <div class="large-6 small-6 columns">
-                  <div class="panel">
-                 <h3><%= blog.naslov %></h3>
-                 <p><%= blog.opis %></p>
-                 <%= blog.created_at.strftime('%I:%M %b %d, %Y') %>
-               </div>
-               </div>
+                <% for blog in @blogs %>              
+                  <div class="large-12 small-10">
+                    <div class="panel_for_blog">
+                     <h3><%= blog.naslov %></h3>
+                     <p><%= blog.opis %></p>
+                     <%= blog.created_at.strftime('%I:%M %b %d, %Y') %>
+                    </div>
+                  </div>
                  <% end %>
-                  <%= link_to "Nov post", new_blog_path %>
+                    <%= link_to "Nov post", new_blog_path %>
  
         </div>
  

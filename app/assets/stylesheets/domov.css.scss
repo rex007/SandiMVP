@@ -7,16 +7,23 @@
 }
 .vmesnik{
 	width: 100%;
-	height: 200px;
+	height: 230px;
 }
 .blog{
+	background:#6c6c6c;
 	position: relative;
 
 	img{
 		position: absolute;
 		z-index: 1;
-		left: 50px;
-		top:-200px;
+		left: 0px;
+		top:-240px;
 
+	}
+	.panel_for_blog{
+		width: 75%;
+		background:#d5d5d5;
+		border-radius: 5px;
+		margin-left: 13%;
 	}
 }
