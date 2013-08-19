@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "SandiMVP spletna stran" %></title>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class="<%= controller.controller_name %>">
+
+
+      <!-- Header -->
+ 
+        <nav class="top-bar">
+          <img src="assets/header_logo.png" alt="">
+          <img class="nav-img-last" src="assets/header_logo2.png" alt="">
+
+        </nav>
+      <!-- End Header -->
+ 
+      <!-- Content -->
+      <div class="content">
+        <%= yield %>
+      </div>
+      <!-- End Content -->
+ 
+ 
+      <!-- Footer -->
+      <footer>
+        <img src="assets/footer_bg.png" alt="SandiMVP - Spletko.eu">
+        <a href="www.spletko.eu"><img class="footer-logo"src="assets/footer_logo.png" alt="Spletko.eu - Postavitev spletnih strani,spletne trgovine"></a>
+      </footer>
+ 
+      <!-- End Footer -->
+ 
+ 
+
+    
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

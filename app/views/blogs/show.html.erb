@@ -1,0 +1,20 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<p>
+  <strong>Naslov:</strong>
+  <%= @blog.naslov %>
+</p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @blog.opis %>
+</p>
+
+<p>
+  <strong>Slika:</strong>
+  <%= @blog.slika %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
