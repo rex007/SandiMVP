@@ -9,21 +9,24 @@
 	width: 100%;
 	height: 230px;
 }
-.blog{
-	background:#6c6c6c;
+.blog_domov{
+	background:url(body_blog_bg.png)40% 10% no-repeat;
+	border-radius: 28% 25% 5% 5%;
 	position: relative;
+	padding-top: 2%;
+	padding-bottom: 2%;
+
 
 	img{
 		position: absolute;
 		z-index: 1;
-		left: 0px;
-		top:-240px;
+		bottom:83%;
 
 	}
 	.panel_for_blog{
-		width: 75%;
-		background:#d5d5d5;
+		width: 65%;
 		border-radius: 5px;
-		margin-left: 13%;
+		margin-left: 19%;
+		margin-bottom: 1%;
 	}
 }

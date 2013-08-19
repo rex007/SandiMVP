@@ -1,13 +1,13 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<div class="large-6 columns">
+<div class="large-12 columns blogs">
 <h1>My way, My style</h1>
 <% for blog in @blogs %>
   <div class="blog">
     <%= image_tag(blog.slika) %>
     <h3><%= blog.naslov %></h3>
-    <%= sanitize(blog.opis) %>
+    <%= sanitize(blog.opis) %> <br />
     <%= blog.created_at.strftime('%I:%M %b %d, %Y')%>
   </div>
   <% end %>

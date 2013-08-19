@@ -53,13 +53,13 @@
  
       <!-- Blog -->
  
-       <div class="row blog">
+       <div class="row blog_domov">
           <img src="assets/body_blog.png" alt="">
                 <% for blog in @blogs %>              
                   <div class="large-12 small-10">
                     <div class="panel_for_blog">
                      <h3><%= blog.naslov %></h3>
-                     <p><%= blog.opis %></p>
+                     <p><%= truncate(strip_tags(blog.opis), length: 100) %></p>
                      <%= blog.created_at.strftime('%I:%M %b %d, %Y') %>
                     </div>
                   </div>
