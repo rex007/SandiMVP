@@ -22,7 +22,14 @@
 
   <body class="<%= controller.controller_name %>">
 
-
+      <!-- Admin Panel -->
+      
+        <div class="admin">
+          <%= link_to 'Dodaj Blog', new_blog_path, class: "button" %>
+          <%= link_to 'Popravi Blog', edit_blog_path(@blog), class: "button" %>
+        </div>
+      
+      <!-- End Admin Panel -->
       <!-- Header -->
  
         <nav class="top-bar">

@@ -1,3 +1,4 @@
+
       <!-- Header Content -->
  
         <div class="row">
@@ -60,11 +61,10 @@
                     <div class="panel_for_blog">
                      <h3><%= blog.naslov %></h3>
                      <p><%= truncate(strip_tags(blog.opis), length: 100) %></p>
-                     <%= blog.created_at.strftime('%I:%M %b %d, %Y') %>
+                     <p class="datum"><%= blog.created_at.strftime('%I:%M %b %d, %Y') %></p>
                     </div>
                   </div>
                  <% end %>
-                    <%= link_to "Nov post", new_blog_path %>
  
         </div>
  

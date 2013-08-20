@@ -9,6 +9,7 @@
     <h3><%= blog.naslov %></h3>
     <%= sanitize(blog.opis) %> <br />
     <%= blog.created_at.strftime('%I:%M %b %d, %Y')%>
+    <%= button_to "Delete", blog,method: :delete %>
   </div>
   <% end %>
 </div>
