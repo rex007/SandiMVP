@@ -14,21 +14,28 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require soundcloud
 //= require_tree .
 
 $(document).foundation();
 
 $(document).ready(function(){
-	var logo_img = $('nav.top-bar img:first-child'),
-		logo_img2 = $('.nav-img-last');
+	var logo_img = $('.logo'),
+		logo_img2 = $('.logo2');
 
 	logo_img.on('mouseenter', function(){
 		logo_img2.fadeIn('500');
-		console.log('do tukaj dela');
 	});
 	logo_img2.on('mouseleave', function(){
 		var $this = $(this);
 		$this.fadeOut('400');
 	});
+
+	soundcloud.addEventListener('onPlayerReady', function(player, data) {
+     player.api_play();
+   });
+
 });
+
+
 

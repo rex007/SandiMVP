@@ -24,17 +24,18 @@
 
       <!-- Admin Panel -->
       
-        <div class="admin">
+        <div class="admin panel-12 small-12">
           <%= link_to 'Dodaj Blog', new_blog_path, class: "button" %>
-          <%= link_to 'Popravi Blog', edit_blog_path(@blog), class: "button" %>
         </div>
       
       <!-- End Admin Panel -->
       <!-- Header -->
  
         <nav class="top-bar">
-          <img src="assets/header_logo.png" alt="">
-          <img class="nav-img-last" src="assets/header_logo2.png" alt="">
+          <%= image_tag "header_logo.png", class: "logo" %>
+          <%= image_tag "header_logo2.png", class: "logo2" %>
+          <%= link_to "Domov", domov_path, class: "button" %>
+          <%= link_to "Bio", bio_path, class: "button" %>
 
         </nav>
       <!-- End Header -->
@@ -48,8 +49,10 @@
  
       <!-- Footer -->
       <footer>
-        <img src="assets/footer_bg.png" alt="SandiMVP - Spletko.eu">
-        <a href="www.spletko.eu"><img class="footer-logo"src="assets/footer_logo.png" alt="Spletko.eu - Postavitev spletnih strani,spletne trgovine"></a>
+        <div class="panel-12 small-12">
+          <%= image_tag "footer_bg.png" %>
+          <a href="www.spletko.eu"><%= image_tag "footer_logo.png" %></a>
+      </div>
       </footer>
  
       <!-- End Footer -->

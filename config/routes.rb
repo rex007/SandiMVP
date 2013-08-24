@@ -1,5 +1,7 @@
 SandiMVP::Application.routes.draw do
+
   get "domov/index"
+  get "domov/bio", as: 'bio'
   resources :blogs
 
   # The priority is based upon order of creation: first created -> highest priority.
