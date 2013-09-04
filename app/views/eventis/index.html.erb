@@ -1,0 +1,33 @@
+<h1>Listing eventis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Naslov</th>
+      <th>Opis</th>
+      <th>Kraj</th>
+      <th>Zacetek</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eventis.each do |eventi| %>
+      <tr>
+        <td><%= eventi.naslov %></td>
+        <td><%= eventi.opis %></td>
+        <td><%= eventi.kraj %></td>
+        <td><%= eventi.zacetek.strftime('%I:%M %d %b, %Y') %></td>
+        <td><%= link_to 'Show', eventi %></td>
+        <td><%= link_to 'Edit', edit_eventi_path(eventi) %></td>
+        <td><%= link_to 'Destroy', eventi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eventi', new_eventi_path %>

@@ -11,12 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130815194908) do
+ActiveRecord::Schema.define(version: 20130903075728) do
 
   create_table "blogs", force: true do |t|
     t.string   "naslov"
     t.text     "opis"
     t.string   "slika"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "eventis", force: true do |t|
+    t.string   "naslov"
+    t.text     "opis"
+    t.string   "kraj"
+    t.datetime "zacetek"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "providers", force: true do |t|
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

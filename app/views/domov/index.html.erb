@@ -18,14 +18,44 @@
         </div>
  
               <div class="large-6 small-12 columns">
-                <div class="panel">
-
+                <div class="panel eventi">
+                  <div class="sredina_eventi">
+                    <h4>Prihajajoci Eventi:</h4>
+                  </div>
+                  <div class="upcoming_slide">
+                    <div class="content_eventi">
+                      <% for upcoming in @upcoming %>
+                      <div class="fn-basic">
+                        <div class="list_events">
+                          <h5><%=upcoming.naslov %></h5>
+                          <p><strong>Opis:</strong> <%=upcoming.opis %></p>
+                          <p><strong>Kraj:</strong> <%= upcoming.kraj %></p>
+                          <p><strong>Zacetek:</strong> <%= upcoming.zacetek.strftime('%I:%M %b %d, %Y') %> </p>
+                        </div>
+                      </div>
+                      <% end %>
+                    </div>  
+                  </div>  
                 </div>
               </div>
  
               <div class="large-6 small-12 columns vmesni_razmak">
-                <div class="panel">
-
+                <div class="panel eventi">
+                  <div class="sredina_eventi">
+                    <h4>Pretekli Eventi:</h4>
+                  </div>
+                  <div class="past_slide">
+                    <div class="content_eventi">
+                      <% for past in @past %>
+                        <div class="list_events">
+                          <h6><%=past.naslov %></h6>
+                          <p><strong>Opis:</strong> <%= past.opis %></p>
+                          <p><strong>Kraj:</strong> <%= past.kraj %></p>
+                          <p><strong>Zacetek:</strong> <%= past.zacetek.strftime('%I:%M %b %d, %Y') %> </p>
+                        </div>
+                      <% end %>
+                    </div>
+                  </div>
                 </div>
               </div>
         </div>
@@ -51,7 +81,8 @@
                   <div class="large-12 small-10">
                     <div class="panel_for_blog">
                      <h3><%= blog.naslov %></h3>
-                     <p><%= truncate(strip_tags(blog.opis), length: 80) %></p>
+                     <p><%= truncate(strip_tags(blog.opis), length: 75) %></p>
+                     <%= link_to "Preberi vec", blog %>
                      <p class="datum"><%= blog.created_at.strftime('%I:%M %b %d, %Y') %></p>
                     </div>
                   </div>
@@ -60,3 +91,7 @@
         </div>
  
       <!-- End Blog -->
+
+      <div id="test">
+        <iframe src="//www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fsandi.mvp.1%3Ffref%3Dts&amp;width=450&amp;height=180&amp;colorscheme=light&amp;layout=standard&amp;show_faces=true&amp;appId=568462169877245" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+      </div>

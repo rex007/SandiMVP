@@ -242,7 +242,7 @@
 
 // We use this to control the display property.
 // $button-display: inline-block;
-// $button-margin-bottom: emCalc(20px);
+ $button-margin-bottom: emCalc(1px);
 
 // We use these to control button text styles.
 // $button-font-family: inherit;
@@ -971,7 +971,7 @@
 // $topbar-bg: #979595;
 
 // Height and margin
- $topbar-height: 145px;
+ $topbar-height: 45px;
  //$topbar-margin-bottom: emCalc(30px);
 
 // Control Input height for top bar

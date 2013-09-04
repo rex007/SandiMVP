@@ -1,9 +1,14 @@
 SandiMVP::Application.routes.draw do
+  get "domov/galerija"
+  get 'auth/facebook/callback', to: 'session#create'
+  get 'auth/failure', to: redirect('/')
+  get 'singout', to: 'session#destroy', as: 'signout'
 
-  get "domov/index"
-  get "domov/bio", as: 'bio'
+  resources :eventis
   resources :blogs
 
+
+  get 'domov/bio', as: 'bio'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

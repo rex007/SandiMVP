@@ -1,0 +1,33 @@
+<%= form_for(@eventi) do |f| %>
+  <% if @eventi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eventi.errors.count, "error") %> prohibited this eventi from being saved:</h2>
+
+      <ul>
+      <% @eventi.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :naslov %><br>
+    <%= f.text_field :naslov %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br>
+    <%= f.text_area :opis %>
+  </div>
+  <div class="field">
+    <%= f.label :kraj %><br>
+    <%= f.text_field :kraj %>
+  </div>
+  <div class="field">
+    <%= f.label :zacetek %><br>
+    <%= f.text_field :zacetek %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

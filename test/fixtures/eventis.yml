@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  naslov: MyString
+  opis: MyText
+  kraj: MyString
+  zacetek: 2013-08-28 20:33:11
+
+two:
+  naslov: MyString
+  opis: MyText
+  kraj: MyString
+  zacetek: 2013-08-28 20:33:11

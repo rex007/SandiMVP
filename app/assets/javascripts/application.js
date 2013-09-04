@@ -11,13 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.pjax
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
 //= require soundcloud
 //= require_tree .
 
-$(document).foundation();
+
+	
 
 $(document).ready(function(){
 	var logo_img = $('.logo'),
@@ -31,10 +33,8 @@ $(document).ready(function(){
 		$this.fadeOut('400');
 	});
 
-	soundcloud.addEventListener('onPlayerReady', function(player, data) {
-     player.api_play();
-   });
-
+	
+	
 });
 
 

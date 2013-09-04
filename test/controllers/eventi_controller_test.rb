@@ -16,8 +16,13 @@ class EventiControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get kdaj:integer" do
-    get :kdaj:integer
+  test "should get dne:date" do
+    get :dne:date
+    assert_response :success
+  end
+
+  test "should get zacetek:time" do
+    get :zacetek:time
     assert_response :success
   end
 

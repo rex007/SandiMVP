@@ -1,0 +1,1 @@
+$('body').html("<h1><%= escape_javaScript(@blog.naslov) %></h1>").append("<%=escape_javaScript(@blog.content) %>")

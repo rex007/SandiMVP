@@ -24,20 +24,31 @@
 
       <!-- Admin Panel -->
       
-        <div class="admin panel-12 small-12">
-          <%= link_to 'Dodaj Blog', new_blog_path, class: "button" %>
+        <div class="admin panel-12 small-12" style="display:none">
+          <%= link_to 'Dodaj Blog', @blog, class: "button", remote: true %>
+
         </div>
       
       <!-- End Admin Panel -->
       <!-- Header -->
- 
-        <nav class="top-bar">
+        <header>
           <%= image_tag "header_logo.png", class: "logo" %>
           <%= image_tag "header_logo2.png", class: "logo2" %>
-          <%= link_to "Domov", domov_path, class: "button" %>
-          <%= link_to "Bio", bio_path, class: "button" %>
-
-        </nav>
+          <nav>
+            <ul>
+              <li><%= link_to "Domov", domov_path, class: "button" %></li>
+              <li><%= link_to "Bio", bio_path, class: "button" %></li>
+            </ul>
+          </nav>
+          <div id="user_nav">
+            <% if current_user %>
+              Prijavljen kot <strong><%= current_user.name %></strong>
+              <%= link_to "Odjava", signout_path, id: "sign_out" %>
+            <% else %>
+              <%= link_to "Prijava", "/auth/facebook", id: "sign_in" %>
+            <% end %>
+          </div>
+        </header>
       <!-- End Header -->
  
       <!-- Content -->
@@ -61,5 +72,8 @@
 
     
     <%= javascript_include_tag "application" %>
+
+
+
   </body>
 </html>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Naslov:</strong>
+  <%= @eventi.naslov %>
+</p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @eventi.opis %>
+</p>
+
+<p>
+  <strong>Kraj:</strong>
+  <%= @eventi.kraj %>
+</p>
+
+<p>
+  <strong>Zacetek:</strong>
+  <%= @eventi.zacetek %>
+</p>
+
+<%= link_to 'Edit', edit_eventi_path(@eventi) %> |
+<%= link_to 'Back', eventis_path %>
