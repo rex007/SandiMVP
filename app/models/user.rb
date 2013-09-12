@@ -11,10 +11,12 @@ class User < ActiveRecord::Base
 	end
 
 	def facebook
-		@facebook ||= Koala::Facebook::API.new(oauth_token)
+		@facebook ||= Koala::Facebook::API.new('CAACEdEose0cBAB8P1FlBATUggt864E4ZBzHgXuSZCrUflr0QZATmqHvmoSJ9IYeNB6mIksZCFlwqZBSISrRGPonXN2NvBvk3lIGXuOJCqoGBJtZANOVQ40gCV7ZC9IuzpTmIQaF83BqJaz1KJVxw0m9f4px3AnYm3qUnJQTyaoPdejwTpUZBk0HKiwj9G5BdaTfwhIFWZCBMwZCgZDZD')
 	end
 
 	def sandi_albums
-		slike = facebook.get_connection('269993253015087','photos')
+		slike = facebook.get_connection('292534410868883','photos')
 	end
+
+
 end

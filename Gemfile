@@ -15,6 +15,7 @@ gem 'zurb-foundation'
 gem "soundcloud", "~> 0.3.2"
 gem "koala", "~> 1.7.0rc1"
 gem 'omniauth-facebook', '1.4.0'
+gem 'will_paginate', '> 3.0' 
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'

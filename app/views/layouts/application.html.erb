@@ -21,7 +21,14 @@
   </head>
 
   <body class="<%= controller.controller_name %>">
-
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/sl_SI/all.js#xfbml=1&appId=568462169877245";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
       <!-- Admin Panel -->
       
         <div class="admin panel-12 small-12" style="display:none">
@@ -33,14 +40,16 @@
       <!-- Header -->
         <header>
           <%= image_tag "header_logo.png", class: "logo" %>
+          <%= image_tag "header_logo_y.png", class: "logo_yellow" %>
           <%= image_tag "header_logo2.png", class: "logo2" %>
           <nav>
             <ul>
-              <li><%= link_to "Domov", domov_path, class: "button" %></li>
-              <li><%= link_to "Bio", bio_path, class: "button" %></li>
+              <li class="levo"><%= link_to "Domov", domov_path, class: "button" %></li>
+              <li class="levo"><%= link_to "Bio", bio_path, class: "button" %></li>
+              <li class="levo"><%= link_to "Fotkiš", galerija_path, class: "button" %></li>
             </ul>
           </nav>
-          <div id="user_nav">
+          <div id="login">
             <% if current_user %>
               Prijavljen kot <strong><%= current_user.name %></strong>
               <%= link_to "Odjava", signout_path, id: "sign_out" %>
@@ -61,8 +70,9 @@
       <!-- Footer -->
       <footer>
         <div class="panel-12 small-12">
-          <%= image_tag "footer_bg.png" %>
-          <a href="www.spletko.eu"><%= image_tag "footer_logo.png" %></a>
+          <%= image_tag "footer_bg.png", class: 'footer_bg' %>
+          <a href="http://www.spletko.eu/"><%= image_tag "footer_logo.png", class: 'spletko' %></a>
+          <%= image_tag "powered-by-rails.png", class: 'rails' %>
       </div>
       </footer>
  

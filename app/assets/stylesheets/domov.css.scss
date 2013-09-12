@@ -1,6 +1,12 @@
 // Place all the styles related to the domov controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.event_upcoming{
+	margin-right: 1000%;
+}
+.event_past{
+	margin-left: 1000%;
+}
 .eventi{
 	height: 250px;
 	overflow: scroll;
@@ -48,8 +54,61 @@
 		}
 	}
 }
-#test{
-	border:1px solid black;
-	background: white;
-	width: 40%;
+
+// bio
+#bio{
+	z-index: 2;
 }
+.bio_first{
+	position: relative;
+	overflow: hidden;	
+	img:first-child{
+
+	}
+	img:last-child{
+		position: absolute;
+		left: -75%;
+	}
+}
+.bio_second{
+	position: relative;
+	overflow: hidden;
+	img:first-child{
+		margin-left: 10%;
+	}
+	img:last-child{
+		position: absolute;
+		top: 0;
+		right: -97%;
+
+	}
+}
+.bio_third{
+	position: relative;
+	overflow: hidden;
+	img:first-child{
+
+	}
+	img:last-child{
+		position: absolute;
+		top: -100%;
+		left:0;
+	}
+}
+// galerija 
+
+#galerija{
+	position: relative;
+	.sredina_g{
+		left: 7%;
+		position: relative;
+	.razmak{
+		margin: 5px;
+	}
+		.fb_galerija{
+			width: 350px;
+			height: 200px;
+		}
+	}
+}
+

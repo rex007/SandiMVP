@@ -1,8 +1,10 @@
-
-
-
-	<% @slike.each do |pic| %>
-<div>
-	<%= image_tag(pic["link"]) %>
+<div id="galerija">
+	<div class="sredina_g">
+		<% @slike.each do |album| %>
+			<div class="th radius razmak">
+				<%= image_tag(album["source"], class: "fb_galerija") %>
+			</div>
+		<% end %>
+	</div>
 </div>
-	<% end %>
+

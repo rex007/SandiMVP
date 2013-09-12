@@ -13,6 +13,37 @@
  *= require foundation_and_overrides
  */
 
+// main page load
+// header,#player,#sc-widget,.eventi,.blog_domov{
+// 	display: none;
+// }
+
+.header_finish{
+	margin-top: 0;
+	transition: all 1s linear;
+}
+#player{
+	display:none;
+}
+#sc-widget{
+	margin-left: 1000%;
+}
+.soundcloud_starter{
+	margin-left: -10%;
+}
+
+// end main page load
+
+// nav animation
+.levo{
+	float: left;
+}
+.fixed{
+	position: fixed;
+	margin-top:0;
+}
+// end nav animation
+
 .admin{
 	width: 100%;
 	height: 35px;
@@ -22,24 +53,36 @@
 }
 
 header{
+	margin-top: -15%;
 	width: 100%;
 	height: 145px;
 	position: relative;
-	background: url(header_bg.png)100% 0 no-repeat,url(header_bg2.png);
+	background: url(header_bg.png)no-repeat,url(header_bg2.png);
 	box-shadow:0 5px 5px #2a2a2a;
 
 	img:first-child {
 		position: absolute;
 		left: 0;
 	}
+	.logo_yellow{
+		position: absolute;
+		left: 0;
+		display: none;
+	}
 	img:last-of-type{
 		position: absolute;
 		left: 0;
 		display: none;
 	}
-	nav ul{
+	nav {
+		ul{
+		position: absolute;
+		margin-top: 12%;
+		list-style: none;
+		}
+
 	}
-	#user_nav{
+	#login{
 		position: absolute;
 		top: 85%;
 		left: 15%;
@@ -54,17 +97,26 @@ header{
 
 footer{
 	position: relative;
-	background: #fefffd;
+	background: url(footer_bg_color.png)100% 0 ;
 	width: 100%;
 	height: 100px;
-	
-	img:first-child{
+	display: none;
+	.footer_bg{
 		position: absolute;
-		top: -122%;
+		bottom: 10%;
 	}
-	img:last-child{
+	.spletko{
 		position: absolute;
-		right:1%;
+		right: 1%;
 		top: 15%;
+		display: none;
+
+	}
+	.rails{
+		position: absolute;
+		right:-15%;
+		top: 65%;
+		width: 80px;
+		height: 30px;
 	}
 }

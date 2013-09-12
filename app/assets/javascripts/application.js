@@ -16,6 +16,7 @@
 //= require foundation
 //= require turbolinks
 //= require soundcloud
+//= require transition
 //= require_tree .
 
 
@@ -23,17 +24,29 @@
 
 $(document).ready(function(){
 	var logo_img = $('.logo'),
-		logo_img2 = $('.logo2');
+		logo_img2 = $('.logo2'),
+		logo_yellow = $('.logo_yellow');
 
 	logo_img.on('mouseenter', function(){
 		logo_img2.fadeIn('500');
+		logo_yellow.fadeIn('900');
 	});
 	logo_img2.on('mouseleave', function(){
 		var $this = $(this);
 		$this.fadeOut('400');
+		logo_yellow.fadeOut('500');
 	});
+	var header = $('header'),
+		player = $('#player'),
+		soundcloud = $('#sc-widget');
 
+	header.addClass('header_finish');
+	setTimeout(function(){
+		player.fadeIn('fast').transition({rotate: '360deg'});
+		soundcloud.transition({marginLeft:'0'},1600);
+	},1300);
 	
+
 	
 });
 
