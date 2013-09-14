@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 	end
 
 	def facebook
-		@facebook ||= Koala::Facebook::API.new('CAACEdEose0cBAB8P1FlBATUggt864E4ZBzHgXuSZCrUflr0QZATmqHvmoSJ9IYeNB6mIksZCFlwqZBSISrRGPonXN2NvBvk3lIGXuOJCqoGBJtZANOVQ40gCV7ZC9IuzpTmIQaF83BqJaz1KJVxw0m9f4px3AnYm3qUnJQTyaoPdejwTpUZBk0HKiwj9G5BdaTfwhIFWZCBMwZCgZDZD')
+		@facebook ||= Koala::Facebook::API.new(oauth_token)
 	end
 
 	def sandi_albums
