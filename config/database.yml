@@ -20,10 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
+  database: sandiMVP.db
   pool: 5
-  database: dd67kmjjo1ilrm
-  username: bimkzjfggyqemn
-  password: t8sdgJ9iDyxulOsfiVhwFRZWsv
-  host: ec2-107-21-120-102.compute-1.amazonaws.com
-  port: 5432
+  timeout: 5000
