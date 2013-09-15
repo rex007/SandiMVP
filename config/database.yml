@@ -20,6 +20,7 @@ test:
 
 production:
   adapter: postgresql
+  encoding: unicode
   database: dd67kmjjo1ilrm
   pool: 5
   username: bimkzjfggyqemn
