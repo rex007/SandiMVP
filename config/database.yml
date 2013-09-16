@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  database: db/sandiMVP.db
+  database: quiet-headland-4699
   pool: 5
   timeout: 5000

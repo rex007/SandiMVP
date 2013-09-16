@@ -14,6 +14,8 @@
 //= require jquery.pjax
 //= require jquery_ujs
 //= require foundation
+//= require easyTicker
+//= require easing.min
 //= require turbolinks
 //= require soundcloud
 //= require transition
